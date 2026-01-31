@@ -7,7 +7,7 @@ on:
 jobs:
   dev:
    name: dev
-   run: python dev.py
+   runs-on: ubuntu-22.04
    steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -21,7 +21,7 @@ jobs:
         run: python app.py
   test:
    name: test
-   run: python test.py
+   runs-on: ubuntu-22.04
    steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -35,7 +35,7 @@ jobs:
         run: python app.py
   prod:
    name: prod
-   run: python prod.py
+   runs-on: ubuntu-22.04
    steps:
       - name: Checkout code
         uses: actions/checkout@v4
