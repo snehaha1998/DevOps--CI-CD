@@ -6,6 +6,7 @@ on:
 
 jobs:
   dev:
+  name: dev
     run: python dev.py
     steps:
       - name: Checkout code
@@ -19,6 +20,7 @@ jobs:
       - name: Run Python app
         run: python app.py
   test:
+  name: test
     run: python test.py
     steps:
       - name: Checkout code
@@ -32,6 +34,7 @@ jobs:
       - name: Run Python app
         run: python app.py
   prod:
+  name: prod
     run: python prod.py
     steps:
       - name: Checkout code
