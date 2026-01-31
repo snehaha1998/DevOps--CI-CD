@@ -7,12 +7,33 @@ on:
 jobs:
   dev:
     run: python dev.py
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run Python app
+        run: python app.py
   test:
     run: python test.py
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run Python app
+        run: python app.py
   prod:
     run: python prod.py
-
-steps:
+    steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
